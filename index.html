@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalkulator</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <script src="kalkulator.js"></script>
+</head>
+
+<body>
+    <div id="main-container" class="box">
+        <main id="main-part">
+            <div id="main-screen">
+            </div>
+            <div class="separator">
+                <button type="button" class="button numeric" id="one" data-key="1">1</button>
+                <button type="button" class="button numeric" id="two" data-key="2">2</button>
+                <button type="button" class="button numeric" id="three" data-key="3">3</button>
+            </div>
+            <div class="separator">
+                <button type="button" class="button numeric" id="four" data-key="4">4</button>
+                <button type="button" class="button numeric" id="five" data-key="5">5</button>
+                <button type="button" class="button numeric" id="six" data-key="6">6</button>
+            </div>
+            <div class="separator">
+                <button type="button" class="button numeric" id="seven" data-key="7">7</button>
+                <button type="button" class="button numeric" id="eight" data-key="8">8</button>
+                <button type="button" class="button numeric" id="nine" data-key="9">9</button>
+            </div>
+            <div class="separator">
+                <button type="button" class="button numeric" id="zero" data-key="0">0</button>
+                <button type="button" class="button operator" id="addition" data-key="+">+</button>
+                <button type="button" class="button operator" id="substraction" data-key="-">-</button>
+            </div>
+            <div class="separator">
+                <button type="button" class="button operator" id="multiplication" data-key="*">*</button>
+                <button type="button" class="button operator" id="division" data-key="/">/</button>
+                <button type="button" class="button" id="equal" data-key="=">=</button>
+            </div>
+            <div class="separator">
+                <button type="button" class="button" id="double" data-key=".">.</button>
+                <button type="button" class="button" id="clearAll" data-key="">CE</button>
+                <button type="button" class="button" id="clearOne" data-key="">C</button>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

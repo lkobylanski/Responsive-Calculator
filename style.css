@@ -1,0 +1,55 @@
+body {
+    margin: 0 !important;
+    font-family: sans-serif;
+    background-color: #2e6032;
+}
+
+#main-container {
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    padding: 125px 0;
+    background-image: url("http://elearning.ponpes-smksa.sch.id/pluginfile.php/166/course/overviewfiles/mtk.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#main-screen {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+#main-part {
+    max-width: 214px;
+    background-color: silver;
+    border: 2px gold solid;
+}
+
+#main-screen {
+    margin: 5px;
+    min-height: 35px;
+    max-width: 208px;
+    background-color: darkgreen;
+    border: 1px gold solid;
+}
+
+.button {
+    font-family: 'Indie Flower', cursive;
+    height: 55px;
+    width: 55px;
+    margin: 5px;
+    background-color: #fc620a;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+@media (max-width: 412px) {
+    #main-container {
+        max-width: 412px;
+        display: flex;
+        justify-content: center;
+    }
+}
