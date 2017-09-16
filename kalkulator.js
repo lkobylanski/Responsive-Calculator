@@ -45,11 +45,8 @@ function loadNumerics() {
 //load all functions for all class=operator buttons +,-,*,/
 function loadOperators() {
     for(let i=0; i<=classOperator.length; i++) {
-        classOperator[i].addEventListener("click", repeaterDenine);
-        classOperator[i].addEventListener("click", furtherMath);
         classOperator[i].addEventListener("click", recoButton);
-        classOperator[i].addEventListener("click", display);   
-        classOperator[i].addEventListener("click", findOperation);  
+		classOperator[i].addEventListener("click", allOps);
     }
 }
 
@@ -60,22 +57,24 @@ function recoButton() {
     return button_value;
 }
 
-//if . is input without any number befroe make it 0.value
-/*function leesThanOne() {
-	if(el === "") {
-		el = 0;
-		return el;
+//functions packed - trigger all or none - prevents user from spamming operator symbols +,-,*,/
+function allOps() {
+	if(add === false && sub === false && multi === false && divide === false) {
+		repeaterDenine();
+		furtherMath();
+		display();
+		findOperation();
+		return;
 	}
 	else {
 		return;
 	}
-}*/
+}
 
 //due to its unique nature . has its own function set triggered once then ignored if was press already - to avoid spamming of . . . . by user
 function checkIfFloat() {
 	if(point === false) {
 		repeater();
-		//lessThanOne();
 		putNumber();
 		display();
 		point = true;
@@ -141,8 +140,8 @@ function findOperation() {
 
 //after pressing equal sign = do math according to recognized operation in fuction above
 function doMath() {
-    el_1 = parseFloat(el_1);
-    el_2 = parseFloat(el_2);
+    el_1 = (el_1 != "") ? parseFloat(el_1) : el_1 = 0; //if 1st value is not set it will be set to 0 - to avoid NaN result in the calc displayer e.g. typing +1 = will result as 0+1=1 instead ""+1 - which is NaN
+    el_2 = (el_2 != "") ? parseFloat(el_2) : el_2 = el_1; //if no 2nd valye is provide will result in doing operation on 2 same argument so 5+"" wll not result as NaN but it will be change to 5+5 = 10 etc.
 
     if(add == true) {
         disp = el_1 + el_2;
