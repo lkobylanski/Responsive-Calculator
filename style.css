@@ -52,4 +52,35 @@ body {
         display: flex;
         justify-content: center;
     }
+	
+	#main-screen {
+		font-size: 22px;
+		text-align: center;
+		padding-top: 10px;
+		overflow: auto;
+	}
+
+	#main-part {
+		max-width: 127px;
+		background-color: silver;
+		border: 1px gold solid;
+	}
+
+	#main-screen {
+		margin: 5px;
+		min-height: 27px;
+		max-width: 114px;
+		background-color: darkgreen;
+		border: 1px gold solid;
+	}
+
+	.button {
+		font-family: 'Indie Flower', cursive;
+		height: 29px;
+		width: 29px;
+		margin: 5px;
+		background-color: #fc620a;
+		font-size: 15px;
+		color: whitesmoke;
+	}
 }
